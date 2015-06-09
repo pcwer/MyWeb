@@ -1,0 +1,176 @@
+﻿/*!
+ * Start Bootstrap - Simple Sidebar HTML Template (http://startbootstrap.com)
+ * Code licensed under the Apache License v2.0.
+ * For details, see http://www.apache.org/licenses/LICENSE-2.0.
+ */
+
+
+body {
+    /*margin-top: 0px;*/
+}
+
+.gray {
+    border: 1px solid gray;
+}
+
+.fixed {
+    position: fixed;
+}
+
+.ns {
+    margin: 0px;
+    padding: 0px;
+}
+
+.navbar-adj {
+    top: 50px;
+}
+
+
+
+/*
+ *  Page layout with side menu
+ */
+
+#wrapper {
+    padding-left: 0px;
+    -webkit-transition: all 0.5s ease;
+    -moz-transition: all 0.5s ease;
+    -o-transition: all 0.5s ease;
+    transition: all 0.5s ease;
+}
+
+#wrapper.toggled {
+    padding-left: 250px;
+}
+
+
+#sideMenu {
+    position: fixed;
+    left: 250px;
+    width: 0;
+    height: 100%;
+    margin-left: -250px;
+    /*overflow-x: hidden;*/
+    overflow-y: auto;
+    background-color: #666;
+    /*border-right: 1px solid #777;*/
+    z-index: 1000;
+    /* animation */
+    -webkit-transition: all 0.5s ease;
+    -moz-transition: all 0.5s ease;
+    -o-transition: all 0.5s ease;
+    transition: all 0.5s ease;
+}
+
+ /* layout size */
+#wrapper.toggled #sideMenu {
+    width: 250px;
+}
+
+#viewport {
+    width: 100%;
+    position:absolute;
+    padding: 15px;
+}
+
+#wrapper.toggled #viewport {
+    position: absolute;
+    margin-right: -250px;
+}
+
+/* Sidemenu navigation */
+.sideMenu-nav {
+    margin-right: -21px;
+    margin-bottom: 20px;
+    margin-left: -20px;
+}
+
+.sideMenu-nav > li > a {
+    padding-right: 20px;
+    padding-left: 20px;
+}
+
+.sideMenu-nav > .active > a,
+.sideMenu-nav > .active > a:hover,
+.sideMenu-nav > .active > a:focus {
+    color: #FFF;
+    background-color: #b57f00;
+}
+
+/* Menu Style */
+
+.sideMenu-nav {
+    position: absolute;
+    top: 0;
+    width: 250px;
+    margin: 0;
+    padding: 0;
+    list-style: none;
+}
+
+.sideMenu-nav li {
+    text-indent: 20px;
+    line-height: 40px;
+}
+
+.sideMenu-nav li a {
+    display: block;
+    text-decoration: none;
+    color: #999999;
+}
+
+.sideMenu-nav li a:hover {
+    text-decoration: none;
+    color: #fff;
+    background: rgba(255,255,255,0.2);
+}
+
+.sideMenu-nav li a:active,
+.sideMenu-nav li a:focus {
+    text-decoration: none;
+}
+
+.sideMenu-nav > #sideMenu-brand {
+    height: 65px;
+    font-size: 18px;
+    line-height: 60px;
+}
+
+.sideMenu-nav > #sideMenu-brand a {
+    color: #999999;
+}
+
+.sideMenu-nav > #sideMenu-brand a:hover {
+    color: #fff;
+    background: none;
+}
+
+
+@media(min-width:768px) {
+    #wrapper {
+        padding-left: 250px;
+    }
+
+    #wrapper.toggled {
+        padding-left: 0;
+    }
+
+    #sideMenu {
+        width: 250px;
+    }
+
+    #wrapper.toggled #sideMenu {
+        width: 0;
+    }
+
+    #viewport {
+        padding: 20px;
+        position: relative;
+    }
+
+    #wrapper.toggled #viewport {
+        position: relative;
+        margin-right: 0;
+    }
+}
